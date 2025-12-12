@@ -14,26 +14,24 @@ body {
 .navbar {
   backdrop-filter: blur(10px);
   background: #0b3bbd; 
-  transition: background 0.3s ease;
+}
+
+.col-lg-8.d-flex.align-items-center.height-100 {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
 }
 
 .navbar.scrolled {
   background: rgba(11, 59, 189, 0.95) !important;
 }
-
-/* Logo responsive */
-.brand-name {
-  color: white;
+.nav-link {
+  color: white !important;
+  font-weight: 500;
+  transition: color 0.2s ease;
 }
-
-.brand-logo {
-  display: none;
-}
-
-.brand-logo img {
-  height: 32px;
-}
-
 /* ========================================
    HERO SECTION
    ======================================== */
@@ -237,7 +235,7 @@ footer {
 
 .project-modal {
   width: 100%;
-  max-width: 1200px;
+  max-width: 75%;
   height: auto;
   max-height: 70vh;
   background: rgba(255,255,255,0.02);
@@ -249,15 +247,7 @@ footer {
   border: 1px solid rgba(255,255,255,0.06);
 }
 
-.project-modal .left {
-  flex: 0 0 40%;
-  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 24px;
-  min-height: 350px;
-}
+
 
 .project-modal .left img {
   width: 100%;
