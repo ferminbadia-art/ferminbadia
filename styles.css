@@ -249,41 +249,6 @@ footer {
 
 
 
-.project-modal .left img {
-  width: 100%;
-  height: auto;
-  max-height: 100%;
-  object-fit: contain;
-  border-radius: 8px;
-}
-
-.project-modal .right {
-  flex: 1 1 60%;
-  padding: 62px;
-  overflow: auto;
-  display: flex;
-  flex-direction: column;
-  
-}
-
-.project-modal .right h2 {
-  margin: 0;
-  font-size: 2.2rem;
-  font-weight: 700;
-  line-height: 1.2;
-}
-
-.project-modal .right .details {
-margin-top: 120px;
-  background: transparent;
-  padding: 0;
-  border-radius: 0;
-  color: rgba(255,255,255,0.85);
-  font-size: 1.05rem;
-  line-height: 1.6;
-  text-align: left;
-}
-
 .project-modal .actions {
   display: flex;
   gap: 8px;
@@ -422,61 +387,4 @@ margin-top: 120px;
   opacity: 1;
   border-color: rgba(255,255,255,0.8);
   box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-}
-
-/* Estilos para descripción del proyecto */
-.project-modal .right .details h5 {
-  color: rgba(255,255,255,0.95);
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-top: 1.2rem;
-  margin-bottom: 0.6rem;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
-  padding-bottom: 0.4rem;
-}
-
-.project-modal .right .details h5:first-child {
-  margin-top: 0;
-}
-
-.project-modal .right .details p {
-  color: rgba(255,255,255,0.85);
-  line-height: 1.6;
-  margin-bottom: 0.8rem;
-}
-
-.project-modal .right .details ul {
-  padding-left: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-.project-modal .right .details li {
-  color: rgba(255,255,255,0.85);
-  line-height: 1.8;
-  margin-bottom: 0.3rem;
-}
-
-/* Responsive para galería */
-@media (max-width: 768px) {
-  .project-modal {
-    flex-direction: column;
-    max-height: 85vh;
-  }
-
-  .project-modal .left {
-    flex: 0 0 auto;
-    min-height: 250px;
-    max-height: 40vh;
-  }
-
-  .project-modal .right {
-    flex: 1;
-    padding: 24px;
-  }
-
-  .gallery-thumb {
-    min-width: 60px;
-    max-width: 60px;
-    height: 45px;
-  }
 }
