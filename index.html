@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fermín Badía – Multimedial</title>
+
+
+  
+  <!-- Bootstrap -->
+<link 
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+  rel="stylesheet">
+
+<!-- Estilos personalizados -->
+<link rel="stylesheet" href="styles.css">
+
+<!-- p5.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.js"></script>
+</head>
+<body>
+
+  <!-- Background animated lights canvas -->
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+  <script src="bg.js" defer></script>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top px-4">
+  <a class="navbar-brand fw-bold" href="#">FERMÍN BADÍA</a>
+
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto gap-3">
+          <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#tresd">Experimentos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#interactivo">Interactivo</a></li>
+          <li class="nav-item"><a class="nav-link" href="#footer">Contacto</a></li>
+      </ul>
+  </div>
+</nav>
+
+
+
+<!-- HERO CON ANIMACIÓN 3 (Campo de Partículas) -->
+<section class="hero d-flex justify-content-center align-items-center" 
+         style="min-height: 500px; height: 500px; background:#0b3bbd; position: relative;">
+  
+  <div class="hero-content">
+    <h1>Diseñador Multimedial</h1>
+    <h3>Made in <br> <strong>Buenos Aires</strong></h3>
+    <small style="opacity: 0.6;">Click 4 Waves</small>
+  </div>
+  
+  <div id="hero-canvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
+</section>
+
+<!-- SKILLS CON ANIMACIÓN 1 (Hover) -->
+
+    <div class="row text-center g-4 mt-3">
+<!-- Corrección: la imagen se verá completa y el texto no será editable, sino una descripción fija -->
+    <div class="row text-center g-4 mt-3">
+<!-- Modal actualizado -->
+<div id="project-modal-overlay" class="project-overlay-full" role="dialog" aria-hidden="true" aria-labelledby="project-modal-title">
+  <div class="project-modal" role="document">
+    <div class="left">
+      <img id="modal-poster" src="Img/DISTEFFANO_2 - Foto.jpg" alt="Poster del proyecto" style="width:100%;height:auto;max-height:100%;object-fit:contain;display:none;">
+      <video id="modal-video" controls style="width:100%;height:auto;max-height:100%;object-fit:contain;display:none;"></video>
+    </div>
+    <div class="right">
+      <h2 id="project-modal-title">Proyecto</h2>
+
+      <div class="details" id="project-modal-details" aria-label="Descripción de la obra" >
+        <p><strong>Descripción:</strong> Escenografia 3D de un ambiente de exterior, modelado en Blender 4.5 y renderizado en Marmoset Toolbag 5.</p>
+      </div>
+
+      <div class="actions">
+        <button id="project-modal-close" class="close-btn" aria-label="Cerrar">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+      <div class="col-md-4">
+        <div class="skill-box skill-project-trigger p-4 rounded-4" role="button" tabindex="0" aria-haspopup="dialog" data-project="photoshop" data-title="Photoshop / Postproducción" data-poster="Img/v4.jpg">
+          <h4>SONY</h4>
+        </div>
+      </div>
+
+<div class="col-md-4">
+        <div class="skill-box skill-project-trigger p-4 rounded-4" role="button" tabindex="0" aria-haspopup="dialog" data-project="photoshop" data-title="Blender/Sub Painter" data-poster="Img/BAG5.jpg">
+          <h4>LANZALLAMAS</h4>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="skill-box skill-project-trigger p-4 rounded-4" role="button" tabindex="0" aria-haspopup="dialog" data-project="photoshop" data-title="After Effects" data-poster="Img/Final_FundacionPilares.mp4">
+          <h4>FUNDACIONES PILARES</h4>
+        </div>
+      </div>
+
+<div class="col-md-4">
+        <div class="skill-box skill-project-trigger p-4 rounded-4" role="button" tabindex="0" aria-haspopup="dialog" data-project="photoshop" data-title="Photoshop / Postproducción" data-poster="Img/Poster - susuki.png">
+          <h4>SUSUKI</h4>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="skill-box skill-project-trigger p-4 rounded-4" role="button" tabindex="0" aria-haspopup="dialog" data-project="motion" data-title="3D y MARMOSET" data-poster="Img/ambient.png">
+          <h4>3D MARMOSET</h4>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="skill-box skill-project-trigger p-4 rounded-4" role="button" tabindex="0" aria-haspopup="dialog" data-project="video" data-title="Edición de Video / Color" data-poster="Img/CHANGING OUR WORLD_FINAL_HIGH.mp4">
+          <h4>GOOMBA KIDS</h4>
+        </div>
+      </div>
+    </div>
+ <div class="col-md-4">
+        <div class="skill-box skill-project-trigger p-4 rounded-4" role="button" tabindex="0" aria-haspopup="dialog" data-project="photoshop" data-title="Map" data-poster="Img/poster - apps.jpg">
+          <h4>MAP</h4>
+        </div>
+      </div>
+       <div class="col-md-4">
+        <div class="skill-box skill-project-trigger p-4 rounded-4" role="button" tabindex="0" aria-haspopup="dialog" data-project="photoshop" data-title="Inmortal Magazine" data-poster="Img/Imweb.png">
+          <h4>IM - WEB</h4>
+        </div>
+      </div>
+       <div class="col-md-4">
+        <div class="skill-box skill-project-trigger p-4 rounded-4" role="button" tabindex="0" aria-haspopup="dialog" data-project="photoshop" data-title="Photoshop / Postproducción" data-poster="Img/Graphics.mp4">
+          <h4>ZEP-FILM</h4>
+
+          
+        </div>
+      </div>
+
+  </div>
+</section>
+
+<!-- PROYECTOS -->
+<section id="proyectos" class="py-5">
+  <div class="container">
+    <h2 class="section-title">Proyectos Destacados</h2>
+    <h3 class="mb-2">Texturización y Renderizado en  <strong>Lumion 11.5</strong></h3>
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="project-box rounded-4 overflow-hidden">
+          <img src="Img/DISTEFFANO_2 - Foto.jpg" alt="Workspace Interior Design" class="project-image img-fluid">
+          <div class="project-overlay">
+            <h4>Diseño de Espacio de Trabajo</h4>
+            <p>Modelado 3D · Renderizado · Diseño de Interiores</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="project-box rounded-4 overflow-hidden">
+          <img src="Img/DISTEFFANO_4 - Foto.jpg" alt="Dining Room Design" class="project-image img-fluid">
+          <div class="project-overlay">
+            <h4>Comedor Contemporáneo</h4>
+            <p>Visualización 3D · Iluminación · Composición</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIMENTOS 2D/3D CON ANIMACIÓN 2 (Repulsión) -->
+
+
+<!-- SECCIÓN INTERACTIVA EXTRA -->
+<section id="interactivo" class="py-5" style="background: rgba(0,0,0,0.2);">
+  <div class="container">
+    <h2 class="section-title"><strong>Experimentos Interactivos</strong></h2>
+  
+    <div id="interactive-canvas" class="canvas-wrapper" style="height: 350px;"></div>
+  </div>
+  <section id="tresd" class="py-5">
+  <div class="container">
+ 
+   
+    <div id="experiments-canvas" class="canvas-wrapper" style="height: 300px;"></div>
+  </div>
+  <section class="py-5">
+  <div class="container">
+   
+    
+
+    <div id="skills-canvas" class="canvas-wrapper mb-4" style="height: 250px;"></div>
+  </div>
+  <section class="container my-5">
+    <h2 class="section-title text-center mb-4">Visualizador 3D</h2>
+    <model-viewer id="main-model" crossorigin="anonymous"
+      src="Escenario Mitchel.glb"
+      environment-image="https://modelviewer.dev/shared-assets/environments/neutral.hdr"
+      ar
+      ar-modes="webxr scene-viewer quick-look"
+      camera-controls
+      tone-mapping="aces"
+      poster="poster.webp"
+      shadow-intensity="1.7"
+      exposure="1.48"
+      shadow-softness="0.5"
+      style="width:100%;height:500px; border-radius:20px; background:rgba(0,0,0,0.1); box-shadow:0 8px 32px rgba(0,0,0,0.2);">
+        <div class="progress-bar hide" slot="progress-bar">
+            <div class="update-bar"></div>
+        </div>
+    </model-viewer>
+    <script src="model-debug.js" defer></script>
+
+   
+</section>
+</section>
+</section>
+<section> <img src="Img/fer.png" alt="Fermín Badía" class="img-fluid rounded-circle mt-4" style="width:150px; height:150px; object-fit:cover; border:4px solid #fff; box-shadow:0 4px 16px rgba(0,0,0,0.2); display:block; margin-left:auto; margin-right:auto;">
+    <h3 class="text-center mt-3">Fermín Badía</h3>
+    <p class="text-center">Diseñador Multimedial · Buenos Aires</p></section>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+<!-- 3D MODEL VIEWER SECTION -->
+
+
+<!-- FOOTER -->
+<footer id="footer" class="text-center py-4 mt-5">
+
+    <p class="mb-1">Carrera: Diseño Multimedial – Escuela Da Vinci, Buenos Aires</p>
+    <p class="mb-0">Materia: Diseño y Programación Web I – Segundo Parcial</p>
+    <p class="mb-0">Instagram - <a href="https://www.instagram.com/ferminbadia" target="_blank" rel="noopener noreferrer">@ferminbadia</a></p>
+    <p class="mb-0">Noviembre 2025</p>
+    <p class="mb-0">DMT3AP</p>
+    <p class="mb-0"><strong>Omar Toyos</strong></p>
+</footer>
+<script src="sketches.js"></script>
+<script src="ui.js" defer></script>
+
+
+
+
+<div class="text-center my-4">
+    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'});" class="btn btn-primary btn-lg rounded-pill shadow">
+        <h3 class="mb-0"><strong>↑↑↑</strong></h3>
+    </button>
+</div>
+
+
+
+</body>
+</html>
