@@ -69,68 +69,108 @@
       <img id="modal-poster" src="Img/DISTEFFANO_2 - Foto.jpg" alt="Poster del proyecto" style="width:100%;height:auto;max-height:100%;object-fit:contain;display:none;">
       <video id="modal-video" controls style="width:100%;height:auto;max-height:100%;object-fit:contain;display:none;"></video>
     </div>
-    </div>
-  </div>
-</div>
-
-
-
-      <div class="col-md-4">
-        <div class="skill-box skill-project-trigger p-4 rounded-4" role="button" tabindex="0" aria-haspopup="dialog" data-project="photoshop" data-title="Photoshop / Postproducción" data-poster="Img/v4.jpg">
-          <h4>SONY</h4>
-        </div>
+    <div class="right d-flex flex-column justify-content-end" style=" padding: 24px; color: #fff; background: #1c1942; border-radius: 0 16px 16px 0; min-width: 220px; ">
+      <!-- Título minimalista y pequeño, separado arriba -->
+      <div class="w-100 mb-2" style="border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 8px;">
+      <span id="project-modal-title" class="text-uppercase fw-light" style="font-size: 0.95rem; letter-spacing: 0.08em; opacity: 0.7;">Proyecto</span>
       </div>
-
-<div class="col-md-4">
-        <div class="skill-box skill-project-trigger p-4 rounded-4" role="button" tabindex="0" aria-haspopup="dialog" data-project="photoshop" data-title="Blender/Sub Painter" data-poster="Img/BAG5.jpg">
-          <h4>LANZALLAMAS</h4>
-        </div>
+      <!-- Enfoque en el proyecto: detalles centrados y destacados -->
+      <div class="details flex-grow-1 d-flex align-items-center justify-content-center" id="project-modal-details" aria-label="Descripción de la obra" style="min-height:120px;">
+      <p class="mb-0 text-center fs-5 fw-semibold" style="width:100%;"></p>
       </div>
-
-      <div class="col-md-4">
-        <div class="skill-box skill-project-trigger p-4 rounded-4" role="button" tabindex="0" aria-haspopup="dialog" data-project="photoshop" data-title="After Effects" data-poster="Img/Final_FundacionPilares.mp4">
-          <h4>FUNDACIONES PILARES</h4>
-        </div>
-      </div>
-
-<div class="col-md-4">
-        <div class="skill-box skill-project-trigger p-4 rounded-4" role="button" tabindex="0" aria-haspopup="dialog" data-project="photoshop" data-title="Photoshop / Postproducción" data-poster="Img/Poster - susuki.png">
-          <h4>SUSUKI</h4>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="skill-box skill-project-trigger p-4 rounded-4" role="button" tabindex="0" aria-haspopup="dialog" data-project="motion" data-title="3D y MARMOSET" data-poster="Img/ambient.png">
-          <h4>3D MARMOSET</h4>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="skill-box skill-project-trigger p-4 rounded-4" role="button" tabindex="0" aria-haspopup="dialog" data-project="video" data-title="Edición de Video / Color" data-poster="Img/CHANGING OUR WORLD_FINAL_HIGH.mp4">
-          <h4>GOOMBA KIDS</h4>
-        </div>
+      <div class="actions mt-3">
+      <button id="project-modal-close" class="close-btn" aria-label="Cerrar">Cerrar</button>
       </div>
     </div>
- <div class="col-md-4">
-        <div class="skill-box skill-project-trigger p-4 rounded-4" role="button" tabindex="0" aria-haspopup="dialog" data-project="photoshop" data-title="Map" data-poster="Img/poster - apps.jpg">
-          <h4>MAP</h4>
-        </div>
-      </div>
-       <div class="col-md-4">
-        <div class="skill-box skill-project-trigger p-4 rounded-4" role="button" tabindex="0" aria-haspopup="dialog" data-project="photoshop" data-title="Inmortal Magazine" data-poster="Img/Imweb.png">
-          <h4>IM - WEB</h4>
-        </div>
-      </div>
-       <div class="col-md-4">
-        <div class="skill-box skill-project-trigger p-4 rounded-4" role="button" tabindex="0" aria-haspopup="dialog" data-project="photoshop" data-title="Photoshop / Postproducción" data-poster="Img/Graphics.mp4">
-          <h4>ZEP-FILM</h4>
+    </div>
+    </div>
 
-          
-        </div>
+    <!-- Skills grid responsive -->
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+      <div class="col">
+      <div class="skill-box skill-project-trigger p-4 rounded-4 h-100" role="button" tabindex="0" aria-haspopup="dialog" data-project="photoshop" data-title="Photoshop / Postproducción" data-poster="Img/v4.jpg">
+        <h4>SONY</h4>
       </div>
+      </div>
+      <div class="col">
+      <div class="skill-box skill-project-trigger p-4 rounded-4 h-100" role="button" tabindex="0" aria-haspopup="dialog" data-project="photoshop" data-title="Blender/Sub Painter" data-poster="Img/BAG5.jpg">
+        <h4>LANZALLAMAS</h4>
+      </div>
+      </div>
+      <div class="modal-video">
+      <div class="skill-box skill-project-trigger p-4 rounded-4 h-100" role="button" tabindex="0" aria-haspopup="dialog" data-project="photoshop" data-title="After Effects" data-poster="Img/Final_FundacionPilares.mp4">
+        <h4>FUNDACIONES PILARES</h4>
+      </div>
+      </div>
+      <div class="col">
+      <div class="skill-box skill-project-trigger p-4 rounded-4 h-100" role="button" tabindex="0" aria-haspopup="dialog" data-project="photoshop" data-title="Photoshop / Postproducción" data-poster="Img/Poster - susuki.png">
+        <h4>SUSUKI</h4>
+      </div>
+      </div>
+      <div class="col">
+      <div class="skill-box skill-project-trigger p-4 rounded-4 h-100" role="button" tabindex="0" aria-haspopup="dialog" data-project="motion" data-title="3D y MARMOSET" data-poster="Img/ambient.png">
+        <h4>3D MARMOSET</h4>
+      </div>
+      </div>
+      <div class="modal-video">
+      <div class="skill-box skill-project-trigger p-4 rounded-4 h-100" role="button" tabindex="0" aria-haspopup="dialog" data-project="video" data-title="Edición de Video / Color" data-poster="Img/CHANGING OUR WORLD_FINAL_HIGH.mp4">
+        <h4>GOOMBA KIDS</h4>
+      </div>
+      </div>
+      <div class="col">
+      <div class="skill-box skill-project-trigger p-4 rounded-4 h-100" role="button" tabindex="0" aria-haspopup="dialog" data-project="photoshop" data-title="Map" data-poster="Img/poster - apps.jpg">
+        <h4>MAP</h4>
+      </div>
+      </div>
+      <div class="col">
+      <div class="skill-box skill-project-trigger p-4 rounded-4 h-100" role="button" tabindex="0" aria-haspopup="dialog" data-project="photoshop" data-title="Inmortal Magazine" data-poster="Img/Imweb.png">
+        <h4>IM - WEB</h4>
+      </div>
+      </div>
+      <div class="modal-video">
+      <div class="skill-box skill-project-trigger p-4 rounded-4 h-100" role="button" tabindex="0" aria-haspopup="dialog" data-project="photoshop" data-title="Photoshop / Postproducción" data-poster="Img/Graphics.mp4">
+        <h4>ZEP-FILM</h4>
+      </div>
+      </div>
+    </div>
 
-  </div>
-</section>
+    <style>
+      /* Asegura que las imágenes y videos del modal mantengan proporción y no se deformen */
+      #project-modal-overlay .left {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      background: #111;
+      border-radius: 16px 0 0 16px;
+      min-width: 220px;
+      min-height: 320px;
+      }
+      #project-modal-overlay img,
+      #project-modal-overlay video {
+      max-width: 100%;
+      max-height: 70vh;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      background: #222;
+      border-radius: 12px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.15);
+      display: block;
+      margin: 0 auto;
+      }
+      @media (max-width: 991.98px) {
+      #project-modal-overlay .project-modal {
+        flex-direction: column;
+      }
+      #project-modal-overlay .left {
+        border-radius: 16px 16px 0 0;
+        min-width: unset;
+        min-height: 180px;
+      }
+      }
+    </style>
 
 <!-- PROYECTOS -->
 <section id="proyectos" class="py-5">
@@ -207,7 +247,7 @@
 </section>
 </section>
 </section>
-<section> <img src="Img/fer.png" alt="Fermín" class="img-fluid rounded-circle mt-4" style="width:150px; height:150px; object-fit:cover; border:4px solid #fff; box-shadow:0 4px 16px rgba(0,0,0,0.2); display:block; margin-left:auto; margin-right:auto;">
+<section> <img src="Img/fer.png" alt="Fermín Badía" class="img-fluid rounded-circle mt-4" style="width:150px; height:150px; object-fit:cover; border:4px solid #fff; box-shadow:0 4px 16px rgba(0,0,0,0.2); display:block; margin-left:auto; margin-right:auto;">
     <h3 class="text-center mt-3">Fermín Badía</h3>
     <p class="text-center">Diseñador Multimedial · Buenos Aires</p></section>
 
