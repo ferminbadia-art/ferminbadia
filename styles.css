@@ -1,0 +1,492 @@
+/* ========================================
+   ESTILOS GENERALES
+   ======================================== */
+body {
+  background: #0b3bbd;
+  color: white;
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+}
+
+/* ========================================
+   NAVBAR
+   ======================================== */
+.navbar {
+  backdrop-filter: blur(10px);
+  background: #0b3bbd; 
+  transition: background 0.3s ease;
+}
+
+.navbar.scrolled {
+  background: rgba(11, 59, 189, 0.95) !important;
+}
+
+/* Logo responsive */
+.brand-name {
+  color: white;
+}
+
+.brand-logo {
+  display: none;
+}
+
+.brand-logo img {
+  height: 32px;
+}
+
+/* ========================================
+   HERO SECTION
+   ======================================== */
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  text-align: center;
+  width: 90%;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.3rem;
+  opacity: 0.9;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}
+
+/* ========================================
+   ANIMACIÓN DE TEXTO (h3 strong)
+   ======================================== */
+@keyframes textVariation {
+  0%, 20% {
+    font-style: normal;
+    text-decoration: none;
+    transform: scale(1);
+  }
+  25%, 45% {
+    font-style: italic;
+    text-decoration: none;
+    transform: scale(1.05);
+  }
+  50%, 70% {
+    font-style: normal;
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 255, 255, 0.8);
+    transform: scale(1);
+  }
+  75%, 95% {
+    font-style: italic;
+    text-decoration: underline wavy;
+    text-decoration-color: rgba(255, 255, 255, 0.6);
+    transform: scale(1.05);
+  }
+  100% {
+    font-style: normal;
+    text-decoration: none;
+    transform: scale(1);
+  }
+}
+
+h3 strong {
+  animation: textVariation 6s ease-in-out infinite;
+  display: inline-block;
+  color: white;
+  font-weight: 700;
+  text-align: center;
+  padding-top: auto;
+  padding-bottom: auto;
+}
+
+/* ========================================
+   CANVAS WRAPPER
+   ======================================== */
+.canvas-wrapper {
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #0b3bbd;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+
+/* ========================================
+   SKILL BOXES
+   ======================================== */
+.skill-box {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.skill-box:hover {
+  transform: translateY(-5px);
+  background: rgba(255,255,255,0.15);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* ========================================
+   PROJECT BOXES
+   ======================================== */
+.project-box {
+  height: 280px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.project-box:hover {
+  transform: scale(1.02);
+  background: rgba(255,255,255,0.1);
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(11, 59, 189, 0.7);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  padding: 1.5rem;
+  text-align: center;
+  z-index: 2;
+}
+
+.project-box:hover .project-overlay {
+  opacity: 1;
+}
+
+/* ========================================
+   P5.JS CANVAS
+   ======================================== */
+#p5-container canvas {
+  width: 100% !important;
+  height: auto !important;
+  display: block;
+}
+
+/* ========================================
+   SECCIONES
+   ======================================== */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.animation-label {
+  text-align: center;
+  margin-bottom: 1rem;
+  opacity: 0.7;
+  font-size: 0.9rem;
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+footer {
+  background: rgba(0,0,0,0.3);
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* ========================================
+   PROJECT MODAL
+   ======================================== */
+.project-overlay-full {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.45);
+  backdrop-filter: blur(6px);
+  z-index: 9998;
+  padding: 24px;
+}
+
+.project-overlay-full.open {
+  display: flex;
+  margin-top: 55px;
+}
+
+.project-modal {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  max-height: 70vh;
+  background: rgba(255,255,255,0.02);
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+  display: flex;
+  overflow: hidden;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.project-modal .left {
+  flex: 0 0 40%;
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  min-height: 350px;
+}
+
+.project-modal .left img {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.project-modal .right {
+  flex: 1 1 60%;
+  padding: 62px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.project-modal .right h2 {
+  margin: 0;
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.project-modal .right .details {
+margin-top: 120px;
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  color: rgba(255,255,255,0.85);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.project-modal .actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  margin-top: 12px;
+}
+
+.project-modal .close-btn {
+  margin-top: 0;
+  display: block;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.12);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+.project-modal .close-btn:hover {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.25);
+}
+
+#modal-video {
+  background: #000;
+  border-radius: 8px;
+}
+
+/* ========================================
+   MEDIA QUERIES - RESPONSIVE
+   ======================================== */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  /* Ocultar nombre, mostrar logo */
+  .brand-name {
+    display: none !important;
+  }
+
+  .brand-logo {
+    display: block !important;
+  }
+}
+
+/* ========================================
+   ESTILOS PARA GALERÍA DE IMÁGENES
+   Agregar al final de styles.css
+   ======================================== */
+
+/* Contenedor principal de galería */
+#modal-gallery {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Imagen principal */
+.gallery-main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+#gallery-main-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+/* Contenedor de thumbnails */
+#gallery-thumbnails {
+  display: flex;
+  gap: 8px;
+  padding: 8px 4px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-height: 100px;
+  
+  /* Scrollbar personalizado */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,255,255,0.3) transparent;
+}
+
+#gallery-thumbnails::-webkit-scrollbar {
+  height: 6px;
+}
+
+#gallery-thumbnails::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#gallery-thumbnails::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.3);
+  border-radius: 3px;
+}
+
+#gallery-thumbnails::-webkit-scrollbar-thumb:hover {
+  background: rgba(255,255,255,0.5);
+}
+
+/* Thumbnails individuales */
+.gallery-thumb {
+  min-width: 80px;
+  max-width: 80px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+  cursor: pointer;
+  opacity: 0.6;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.gallery-thumb:hover {
+  opacity: 1;
+  transform: scale(1.05);
+  border-color: rgba(255,255,255,0.3);
+}
+
+.gallery-thumb.active {
+  opacity: 1;
+  border-color: rgba(255,255,255,0.8);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+/* Estilos para descripción del proyecto */
+.project-modal .right .details h5 {
+  color: rgba(255,255,255,0.95);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 1.2rem;
+  margin-bottom: 0.6rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding-bottom: 0.4rem;
+}
+
+.project-modal .right .details h5:first-child {
+  margin-top: 0;
+}
+
+.project-modal .right .details p {
+  color: rgba(255,255,255,0.85);
+  line-height: 1.6;
+  margin-bottom: 0.8rem;
+}
+
+.project-modal .right .details ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.project-modal .right .details li {
+  color: rgba(255,255,255,0.85);
+  line-height: 1.8;
+  margin-bottom: 0.3rem;
+}
+
+/* Responsive para galería */
+@media (max-width: 768px) {
+  .project-modal {
+    flex-direction: column;
+    max-height: 85vh;
+  }
+
+  .project-modal .left {
+    flex: 0 0 auto;
+    min-height: 250px;
+    max-height: 40vh;
+  }
+
+  .project-modal .right {
+    flex: 1;
+    padding: 24px;
+  }
+
+  .gallery-thumb {
+    min-width: 60px;
+    max-width: 60px;
+    height: 45px;
+  }
+}
